@@ -19,7 +19,8 @@ module.exports = {
           {
             loader: "style-loader",
             options: {
-              singleton: true // 处理为单个style标签,注释掉试试看?
+              // singleton: true, // singleton为style-loader为1.0.0之前
+              injectType: 'singletonStyleTag'
             }
           },
           'css-loader',

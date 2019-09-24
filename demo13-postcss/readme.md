@@ -37,7 +37,7 @@
 
 ### 3.安装相关依赖
 ```javascript
-npm install -D css-loader style-loader
+npm install -D css-loader style-loader file-loader
 npm install -D postcss-loader postcss autoprefixer
 ```
 
@@ -155,10 +155,12 @@ webpack
 transform 样式被添加了相应的前缀。
 
 ```javacript
-transform: all 1s;
+user-select: none;
 --------》
--webkit-transform: all 1s;
-        transform: all 1s;
+-webkit-user-select: none;
+    -moz-user-select: none;
+      -ms-user-select: none;
+        user-select: none;
 ```
 ### 9.源码地址
 demo 代码地址: https://github.com/SimpleCodeCX/simple-webpack-demos/tree/master/demo13-postcss

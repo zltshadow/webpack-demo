@@ -1,5 +1,6 @@
 body {
   background-color: red;
   transform: all 1s;
+  user-select: none;
 }
 
