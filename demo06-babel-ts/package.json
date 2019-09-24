@@ -1,0 +1,26 @@
+{
+  "name": "demo06",
+  "version": "1.0.0",
+  "description": "webpack @babel typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "@babel",
+    "typescript"
+  ],
+  "author": "Simple",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0"
+  }
+}
