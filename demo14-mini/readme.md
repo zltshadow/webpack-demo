@@ -62,6 +62,8 @@ npm install -D webpack
 npm install -D css-loader
 npm install -D mini-css-extract-plugin
 npm install -D html-webpack-plugin
+npm install -D sass-loader
+npm install -D node-sass
 ```
 ### 6.目录结构
 ```javascript

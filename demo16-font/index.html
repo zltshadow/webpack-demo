@@ -6,16 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Webpack4系列实践Demo</title>
+  <!-- 这块全部由app.js引入 -->
+  <!-- <script src="src/assets/fonts/iconfont.js"></script>
+  <link rel="stylesheet" href="src/assets/fonts/iconfont.css">
+  <link rel="stylesheet" href="src/assets/styles/app.css"> -->
 </head>
 
 <body>
   demo16 font
   <div id="app">
-    <div class="icons-box">
-      <i class="icon icon-wechat"></i>
-      <i class="icon icon-github"></i>
-      <i class="icon icon-envelop"></i>
-    </div>
+    <!--unicode方式引用-->
+    <span class="iconfont">&#xeb9a;</span>
+    <!-- fontclass方式引用 -->
+    <span class="iconfont icon-icon_wechat"></span>
+    <!--SVG方式引用-->
+    <svg class="svg-icon" aria-hidden="true">
+      <use xlink:href="#icon-icon_alipay_line"></use>
+    </svg>
   </div>
 </body>
 

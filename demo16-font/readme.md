@@ -42,16 +42,7 @@
 
 ### 2.制作自定义字体
 
-通过 [IcoMoon](https://icomoon.io/app) 平台，我们可以挑选和定制项目所用到的字体 icon ，最后导出字体的 eot , svg , woff , ttf 格式，并包含一个定义了 `@font-face` 的 css 文件，也就是说我们不需要自己去定义 `@font-face` ，只要引用这份 css 文件，即可使用到字体图标。
-
-IconMon 平台导出的文件包大概如下：
-```javascript
-icomoon.eot
-icomoon.svg
-icomoon.ttf
-icomoon.woff
-style.css // 定义了 @font-face，以及使用字体的相关样式
-```
+通过 [IconFont](https://www.iconfont.cn) 平台，我们可以挑选和定制项目所用到的字体 icon .
 
 ### 3.通过 url-loader 和 file-loader 处理字体
 
@@ -70,10 +61,10 @@ style.css // 定义了 @font-face，以及使用字体的相关样式
 ### 4.安装相关依赖
 
 ```javascript
+npm install -D webpack // html-webpack-plugin、mini-css-extract-plugin 依赖于 webpack
 npm install -D css-loader style-loader
 npm install -D file-loader url-loader
 npm install -D html-webpack-plugin mini-css-extract-plugin
-npm install -D webpack // html-webpack-plugin、mini-css-extract-plugin 依赖于 webpack
 ```
 
 ### 5.目录结构
@@ -84,83 +75,22 @@ npm install -D webpack // html-webpack-plugin、mini-css-extract-plugin 依赖�
     --src
       --assets
         --fonts
-          -icomoon.css
-          -icomoon.eot //3KB
-          -icomoon.svg //5KB
-          -icomoon.ttf //3KB
-          -icomoon.woff //3KB
+          -demo_index.html
+          -demo.css
+          -iconfont.css
+          -iconfont.eot
+          -iconfont.js
+          -iconfont.json
+          -iconfont.svg
+          -iconfont.ttf
+          -iconfont.woff
+          -iconfont.woff2 
         --styles
           -app.css
       -app.js
     -index.html
     -webpack.config.js
 ```
-
-src/assets/fonts/icomoon.css
-```javascript
-@font-face {
-  font-family: "icomoon";
-  src: url("./icomoon.eot?nn7hff");
-  src: url("./icomoon.eot?nn7hff#iefix") format("embedded-opentype"),
-    url("./icomoon.ttf?nn7hff") format("truetype"),
-    url("./icomoon.woff?nn7hff") format("woff"),
-    url("./icomoon.svg?nn7hff#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-wechat:before {
-  content: "\e900";
-  color: #7bb32e;
-}
-.icon-github:before {
-  content: "\e902";
-}
-.icon-envelop:before {
-  content: "\e945";
-}
-```
-
-src/assets/styles/app.css
-```javascript
-.icons-box {
-  width: 500px;
-  height: 100px;
-  margin: auto;
-  margin-top: 180px;
-}
-
-.icons-box i {
-  font-size: 100px;
-  margin-left: 20px;
-}
-```
-
-src/app.js
-
-```javascript
-import "./assets/fonts/icomoon.css";
-import "./assets/styles/app.css";
-```
-
-
-
 
 ### 6.编写 webpack 配置文件
 webpack.config.js
@@ -239,16 +169,13 @@ webpack
 ```javacript
 --dist
   --fonts
-    -icomoon-69ba6.min.svg //5KB
+    -iconfont-69ba6.min.svg //5KB
   -0.app.a3d3cc59.css
   -app.bundle.js
   -index.html
 ```
 
 <= 3KB 的字体文件被转换成 base64 字符串并打包进 `app.bundle.js` 中。
-
-`icomoon.svg`(18.6KB) => `icomoon-69ba6.min.svg`
-
 
 把 `limit` 改成 `5000` 试试? 
 

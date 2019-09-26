@@ -1,11 +1,25 @@
-.icons-box {
-  width: 500px;
-  height: 100px;
-  margin: auto;
-  margin-top: 180px;
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/iconfont.woff2') format('woff2'),
+      url('../fonts/iconfont.woff') format('woff'),
+      url('../fonts/iconfont.ttf') format('truetype'),
+      url('../fonts/iconfont.svg#iconfont') format('svg');
 }
 
-.icons-box i {
-  font-size: 100px;
-  margin-left: 20px;
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 40px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.svg-icon {
+    width: 40px;
+    height: 40px;
+    color: palegreen;/*SVG 控制图标颜色*/
+    fill: currentColor;
+    overflow: hidden;
 }

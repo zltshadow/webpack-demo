@@ -11,6 +11,20 @@
       "font_class": "icon_alipay_line",
       "unicode": "eb90",
       "unicode_decimal": 60304
+    },
+    {
+      "icon_id": "7766771",
+      "name": "icon_qq",
+      "font_class": "icon_qq",
+      "unicode": "eb9a",
+      "unicode_decimal": 60314
+    },
+    {
+      "icon_id": "7766806",
+      "name": "icon_wechat",
+      "font_class": "icon_wechat",
+      "unicode": "eba0",
+      "unicode_decimal": 60320
     }
   ]
 }
