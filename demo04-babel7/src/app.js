@@ -1,5 +1,5 @@
 // import "@babel/polyfill";
-let func = () => { };
+let func = () => {};
 
 /**
  * Array.prototype.includes 不兼容 ie 11,详见 mdn 文档
@@ -21,10 +21,10 @@ console.log(set1.has(1));
  * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
  */
 var o1 = {},
-  o2 = function () { },
+  o2 = function () {},
   o3 = window;
 let weakmap = new WeakMap();
 weakmap.set(o1, 1);
 weakmap.set(o2, 2);
 weakmap.set(o3, 3);
-console.log(weakmap.get(o1));   // => 1
+console.log(weakmap.get(o1)); // => 1

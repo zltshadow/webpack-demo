@@ -163,6 +163,6 @@ user-select: none;
         user-select: none;
 ```
 ### 9.源码地址
-demo 代码地址: https://github.com/SimpleCodeCX/simple-webpack-demos/tree/master/demo13-postcss
+demo 代码地址: https://github.com/zltshadow/webpack-demo/tree/master/demo13-postcss
 
-仓库代码地址(及目录): https://github.com/SimpleCodeCX/simple-webpack-demos
+仓库代码地址(及目录): https://github.com/zltshadow/webpack-demo

@@ -1,6 +1,9 @@
+# [参考出处](https://juejin.im/post/5ce8f81de51d454f73356cbd)
+
 ## demo07 自动生成 Html 文件
 
-### 1.为什么要自动生成html?
+### 1.为什么要自动生成html
+
 在之前的 demo 中，执行完 `webpack` 后要手动把生成的同步模块的 js 包 (或css包) 引入到html中，这样其实是比较繁琐的。
 
 尤其是在真正的项目开发中，为了对静态资源或第三方包做长缓存，我们会配置 webpack ，让其生成的每个包的文件名都自动带上该包对应的 chunkhash 值。如果文件内容有改变的话，那么该文件对应的包的 chunkhash 也会改变，这样就导致对应的 html 引用的 url 地址也需要进行相应的修改。
@@ -29,10 +32,10 @@ html-webpack-plugin 可以根据你配置的 html 模板，自动生成一个 ht
 - filename 生成 html 的文件名
 - template 指定一个模板文件来生成 html ，可选的模板有 html,jade , ejs 等等，使用自定义模板时，需要安装相对应的 loader 。
 - inject 配置 `<script>` (即js包) 标签在 html 中的注入选项：true(默认) | body | head | false
-    - true `<script>` 标签放在 `<body>` 底部
-    - body 效果与 true 相同
-    - head `<script>` 标签放在 html 的 `<head>` 标签内
-    - false 不引用 webpack 生成的 js 文件
+  - true `<script>` 标签放在 `<body>` 底部
+  - body 效果与 true 相同
+  - head `<script>` 标签放在 html 的 `<head>` 标签内
+  - false 不引用 webpack 生成的 js 文件
 - favicon 设置 html 文件的 favicon
 - minify (默认false) 对 html 文件进行压缩
 - hash 在引用 js 或 css 文件的 url 中添加一个唯一的 hash 值，用于避免缓存命中
@@ -41,10 +44,10 @@ html-webpack-plugin 可以根据你配置的 html 模板，自动生成一个 ht
 
    官方文档：[https://github.com/jantimon/html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 
-
 ### 3.安装相关依赖
 
 (注意：html-webpack-plugin 依赖于 webpack，因此需要在项目下安装 webpack)
+
 ```javascript
 npm install -D html-webpack-plugin
 npm install -D webpack
@@ -53,6 +56,7 @@ npm install -D style-loader // 将 css 以 style 节点插入 html 中
 ```
 
 ### 4.目录结构
+
 ```javascript
 // `--` 代表目录， `-` 代表文件
   --demo07
@@ -64,8 +68,8 @@ npm install -D style-loader // 将 css 以 style 节点插入 html 中
     --webpack.config.js
 ```
 
-
 src/app.js
+
 ```javascript
 // const css = import('./style.css');
 window.addEventListener("click", function () {
@@ -75,6 +79,7 @@ window.addEventListener("click", function () {
 ```
 
 src/style.js
+
 ```javascript
 body{
   background-color: red;
@@ -82,6 +87,7 @@ body{
 ```
 
 ### 5.编写webpack配置文件
+
 webpack.config.js
 
 ```javascript
@@ -134,8 +140,10 @@ webpack
 ```
 
 ### 7.验证打包结果
+
 在 dist 文件夹中包含 index.html , 并自动引用相应的 js 包。
 输出结果：
+
 ```javacript
 1.bundle.js
 app.bundle.js
@@ -143,6 +151,7 @@ index.html
 ```
 
 ### 8.源码地址
-demo 代码地址: https://github.com/SimpleCodeCX/simple-webpack-demos/tree/master/demo07-html
 
-仓库代码地址(及目录): https://github.com/SimpleCodeCX/simple-webpack-demos
+demo 代码地址: <https://github.com/zltshadow/webpack-demo/tree/master/demo07-html>
+
+仓库代码地址(及目录): <https://github.com/zltshadow/webpack-demo>

@@ -276,6 +276,6 @@ index.html
 
 
 ### 10.源码地址
-demo 代码地址: https://github.com/SimpleCodeCX/simple-webpack-demos/tree/master/demo14-mini
+demo 代码地址: https://github.com/zltshadow/webpack-demo/tree/master/demo14-mini
 
-仓库代码地址(及目录): https://github.com/SimpleCodeCX/simple-webpack-demos
+仓库代码地址(及目录): https://github.com/zltshadow/webpack-demo

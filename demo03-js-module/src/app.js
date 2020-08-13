@@ -11,13 +11,16 @@ var commonHello = require('./lib/hello-common');
 commonHello();
 
 // AMD
-require(['./lib/hello-amd'], function (amdHello) {
-  amdHello();
-});
+var amdHello = require('./lib/hello-amd');
+amdHello();
 
 // UMD
 var umdHello = require('./lib/hello-umd');
 umdHello();
-require(['./lib/hello-umd'], function (umdHello) {
+
+// CommonJs，AMD，UMD可以统一引入
+require(['./lib/hello-common', './lib/hello-amd', './lib/hello-umd'], function (commonHello, amdHello, umdHello) {
+  commonHello();
+  amdHello();
   umdHello();
 });

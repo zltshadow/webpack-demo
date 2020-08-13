@@ -281,6 +281,6 @@ npm run prod
 ```
 
 ### 7.源码地址
-demo 代码地址: https://github.com/SimpleCodeCX/simple-webpack-demos/tree/master/demo19-dev-prod
+demo 代码地址: https://github.com/zltshadow/webpack-demo/tree/master/demo19-dev-prod
 
-仓库代码地址(及目录): https://github.com/SimpleCodeCX/simple-webpack-demos
+仓库代码地址(及目录): https://github.com/zltshadow/webpack-demo

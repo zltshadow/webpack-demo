@@ -1,9 +1,13 @@
+# [参考出处](https://juejin.im/post/5ce8f81de51d454f73356cbd)
+
 ## demo06 webpack + babel7 + typescript
 
 ### 1.说明
+
 本 demo06 演示 webpack 打包 babel 和 typescript ，关于 babel 和 typescript 的 webpack 单独打包介绍，请看我之前的 demo04 和 demo05
 
 ### 2.关于 @babel 和 typescript 的结合
+
 [Babel 7 的发布](https://babel.docschina.org/blog/2018/08/27/7.0.0) 中有提到 Babel 团队与 Typescript 团队合作，让 Badel 使用 `@babel/preset-typescript` 来解析转换类型语法。
 
 这篇是 Typescript 团队的相关文章：[TypeScript and Babel 7](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
@@ -15,12 +19,14 @@
 ### 3.安装相关依赖
 
 @babel 相关
+
 ```javascript
 npm install --save-dev @babel/core @babel/preset-env
 npm install --save @babel/polyfill //(注意没有-dev )
 ```
 
 typescript 相关
+
 ```javascript
 npm install --save-dev typescript
 ```
@@ -32,8 +38,8 @@ npm install --save-dev babel-loader
 npm install --save-dev ts-loader
 ```
 
-
 ### 4.目录结构
+
 ```javascript
 // `--` 代表目录， `-` 代表文件
   --demo06
@@ -46,6 +52,7 @@ npm install --save-dev ts-loader
     -tsconfig.json
     -webpack.config.js
 ```
+
 src/app.ts
 
 ```javascript
@@ -69,6 +76,7 @@ console.log(user1);
 ```
 
 src/new-features.ts
+
 ```javascript
 // 使用javasript的新特性，比如Promise,WeadMap,Array.prototype.includes等
 // 不兼容ie 11，因此需要在应用入口(app.ts)导入@babel/polyfill包,在ie 11浏览器进行测试
@@ -103,6 +111,7 @@ console.log(weakmap.get(o1));   // => 1
 ```
 
 src/User.ts
+
 ```javascript
 // interface typescript 的类型
 export interface User {
@@ -119,7 +128,9 @@ export interface Animal {
 ```
 
 ### 5.编写 babel 配置文件
+
 babel.config.js
+
 ```javascript
 const presets = [
   [
@@ -139,7 +150,9 @@ const presets = [
 
 module.exports = { presets };
 ```
+
 ### 6.编写 tsconfig.json 配置文件
+
 tsconfig.json
 
 ```javascript
@@ -161,7 +174,9 @@ tsconfig.json
   ]
 }
 ```
+
 ### 7.编写 webpack 配置文件
+
 webpack.config.js
 
 ```javascript
@@ -197,19 +212,25 @@ module.exports = {
   }
 }
 ```
+
 ### 8.执行打包命令
+
 ```javacript
 
 >(默认你已经安装了全局 webpack 以及 webpack-cli )
 
 webpack
 ```
+
 打包成功后，会在 demo06 目录下生成 dist/bundle.js
+
 ### 9.验证打包结果
+
 创建 index.html 文件,引用打包生成的文件 (app.bundle.js),
 分别用 ie , Chrome 浏览器打开，并查看控制台。
 
 输出结果：
+
 ```javacript
 true
 true
@@ -218,6 +239,7 @@ true
 ```
 
 ### 10.源码地址
-demo 代码地址: https://github.com/SimpleCodeCX/simple-webpack-demos/tree/master/demo06-babel-ts
 
-仓库代码地址(及目录): https://github.com/SimpleCodeCX/simple-webpack-demos
+demo 代码地址: <https://github.com/zltshadow/webpack-demo/tree/master/demo06-babel-ts>
+
+仓库代码地址(及目录): <https://github.com/zltshadow/webpack-demo>

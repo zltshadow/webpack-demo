@@ -1,10 +1,12 @@
-# demo01 最简单的 webpack 零配置实践
+# [参考出处](https://juejin.im/post/5ce8f81de51d454f73356cbd)
 
-## 1.零配置 webpack
+## demo01 最简单的 webpack 零配置实践
+
+### 1.零配置 webpack
 
 webpack4 支持零配置打包(无需 webpack.config.js 配置文件)，首先我们可以直接运行 `webpack index.js`（入口index.js）进行编译打包。
 
-## 2.目录结构
+### 2.目录结构
 
 在 demo01 目录下新建 hello.js 和 index.js
 
@@ -33,7 +35,7 @@ import {
 helloWorld();
 ```
 
-## 3.执行打包命令：webpack
+### 3.执行打包命令：webpack
 
 >(默认你已经安装了全局 webpack 以及 webpack-cli )
 
@@ -43,7 +45,7 @@ webpack ./src/index.js
 
 打包成功后，会在 demo01 目录下生成 dist/main.js
 
-## 4.验证打包结果
+### 4.验证打包结果
 
 ```javacript
 node dist/main.js
@@ -51,7 +53,7 @@ node dist/main.js
 
 结果输出：hello world!
 
-## 5.总结
+### 5.总结
 
 * 想了解更多 webpack 的命令?
 
@@ -72,7 +74,7 @@ node dist/main.js
   >在没有指定 webpack 的打包模式时，webpack 默认使用 production 模式进行打包，因此会对代码进行压缩。
   >试试这个: webpack ./src/index.js --mode development或者修改webpack.config.js将mode设为development
 
-## 6.源码地址
+### 6.源码地址
 
 demo 代码地址: <https://github.com/zltshadow/webpack-demo/tree/master/demo01>
 
