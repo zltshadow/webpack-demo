@@ -1,0 +1,28 @@
+{
+  "name": "webpack-official-demo",
+  "version": "1.0.0",
+  "description": "webpack-official-demo",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zltshadow/webpack-demo/tree/master/webpack-official-demo"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "zlt_shadow",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}

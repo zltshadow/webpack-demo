@@ -1,0 +1,10 @@
+@font-face{
+  font-family: 'SanJiShaHeiJianTi';
+  src:'../assets/font/SanJiShaHeiJianTi/SanJiShaHeiJianTi-2.ttf'
+}
+
+.hello {
+  color: red;
+  background: url('../assets/images/千与千寻.jpg');
+  font-family: 'SanJiShaHeiJianTi';
+}
