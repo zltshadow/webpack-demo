@@ -1,18 +1,17 @@
 import _ from 'lodash';
-import './style.css';
-import Icon from "../assets/images/千与千寻.jpg"
+import printMe from './print'
 
 function component() {
   var element = document.createElement('div');
+  var btn = document.createElement('button');
 
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-  element.classList.add('hello');
 
-  var myIcon = new Image();
-  myIcon.src = Icon;
+  btn.innerHTML = 'Click me and check the alert!';
+  btn.onclick = printMe;
 
-  element.appendChild(myIcon);
+  element.appendChild(btn);
+
   return element;
 }
 
