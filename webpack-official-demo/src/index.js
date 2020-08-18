@@ -7,7 +7,7 @@ function component() {
 
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-  btn.innerHTML = 'Click me and check the alert!';
+  btn.innerHTML = 'Click me and check the console!';
   btn.onclick = printMe;
 
   element.appendChild(btn);
