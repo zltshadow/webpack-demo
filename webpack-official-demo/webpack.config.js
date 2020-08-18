@@ -1,7 +1,5 @@
 const path = require('path');
-const {
-  LoaderOptionsPlugin
-} = require('webpack');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
   CleanWebpackPlugin
@@ -10,11 +8,11 @@ const {
 module.exports = {
   entry: {
     app: './src/index.js',
-    print: './src/print.js'
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
   plugins: [
     /**中文官方文档还没更新
@@ -31,8 +29,16 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Webpack Output Management'
-    })
+    }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
+  module: {
+    rules: [{
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }]
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
